@@ -23,6 +23,8 @@ public interface CustomerServiceInterface {
 //    TaskResponse makeTask(String email,TaskRequest taskRequest) throws CustomerDoesNotExist;
 //
     List<Task> fetchTask(LogInRequest logInRequest) throws CustomerDoesNotExist;
+    void sendVerificationEmail(String toEmail, String verificationToken);
+    String generateToken(String email);
 //
 //    DeleteResponse deleteAllTask(LogInRequest logInRequest) throws CustomerDoesNotExist;
 //
